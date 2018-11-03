@@ -1,0 +1,20 @@
+#Hanuma50 MTK TWRP 2.8.7.1
+
+/boot		emmc	/dev/bootimg
+/logo		emmc	/dev/logo					flags=display="Logo";backup=1
+/nvram		emmc	/dev/nvram					flags=display="Nvram";backup=1
+/recovery	emmc	/dev/recovery			    flags=display="Recovery";backup=1
+/uboot      emmc	/dev/uboot					flags=display="Uboot";backup=1
+/system		ext4	/emmc@android 
+/cache		ext4	/dev/block/mmcblk0p10
+/persist    ext4    /emmc@persist               flags=display="Persist";backup=1
+/mpt        ext4    /emmc@mpt                   flags=display="Mpt";backup=1
+/cust       ext4    /emmc@cust                  flags=display="Cust";backup=1
+/persist-lg    ext4    /emmc@persist_lg          flags=display="Persist-lg";backup=1      
+/data		ext4	/emmc@usrdata                length=-16384
+#/emmc		vfat	/emmc@fat 		            flags=display="Phone Storage";storage;wipeingui
+/external_sd  	auto	/dev/block/mmcblk1p1	/dev/block/mmcblk1	flags=display="MicroSD";storage;wipeingui;removable
+/secro 	    emmc    /dev/sec_ro                 flags=subpartitionof=/nvram;backup=1
+#/usb-otg	auto	/dev/block/sda1		/dev/block/sda		flags=display="Usb-Otg";storage;wipeingui;removable
+
+#Hanuma50 MTK TWRP 2.8.7.1
